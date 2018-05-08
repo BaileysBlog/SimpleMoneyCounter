@@ -1,5 +1,19 @@
-<div FullHeight class="d-flex justify-content-center">
-    <div class="align-self-center">
-        <h1>Home Screen</h1>
+<div class="d-flex justify-content-center">
+    <div class="widther mt-3 mb-2">
+        <tip-selector *ngFor="let cat of Categories" [Category]="cat" [TriggerClear]="ClearObservable" (valueChange)="UpdateTotal($event)"></tip-selector>
+        <mat-divider></mat-divider>
+        <div class="row">
+            <div class="col-6">
+                <p>Total</p>
+            </div>
+            <div class="col-6 text-center">
+                <p class="text-success">{{Total | currency}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="button" class="btn btn-warning form-control" (click)="Clear()" value="Clear"> 
+            </div>
+        </div>
     </div>
 </div>

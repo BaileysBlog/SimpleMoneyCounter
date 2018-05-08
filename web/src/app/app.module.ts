@@ -26,7 +26,6 @@ import { AuthService } from './_Services/auth.service';
   declarations: [
     AppComponent,
     NavBarComponent
-    
   ],
   imports: [
     BrowserModule,
